@@ -12,7 +12,7 @@ class Carrito {
         fun eliminarProducto(index : Int) {
 
             carrito.removeAt(index)
-        } pene caca
+        }
     }
 
 
