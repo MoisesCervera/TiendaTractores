@@ -10,7 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivityLogin : AppCompatActivity() {
-// test
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,7 @@ class MainActivityLogin : AppCompatActivity() {
         val btnEtiReg = findViewById<TextView>(R.id.eti_regist)
 
         btnEtiReg.setOnClickListener{
-            goToRegister()
+            goToRegister() // pene
         }
 
 
