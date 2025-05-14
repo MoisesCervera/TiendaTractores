@@ -3,7 +3,6 @@ package com.example.tiendatractores
 import com.example.Product
 
 class Carrito {
-// pene
     object CarritoVer{
         var carrito = ArrayList<Product>()
          fun obtenerProductos(): ArrayList<Product> {
@@ -13,7 +12,7 @@ class Carrito {
         fun eliminarProducto(index : Int) {
 
             carrito.removeAt(index)
-        }
+        } pene caca
     }
 
 
