@@ -3,8 +3,7 @@ package com.example.tiendatractores
 import com.example.Product
 
 class Carrito {
-//test
-
+// pene
     object CarritoVer{
         var carrito = ArrayList<Product>()
          fun obtenerProductos(): ArrayList<Product> {
