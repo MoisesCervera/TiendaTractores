@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="336dp"
+            android:layout_height="100dp"
+            android:cropToPadding="false"
+            android:src="@drawable/logo_tractor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Iniciar sesión"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                android:id="@+id/eti_inic_ses"/>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/caja_correo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Correo electrónico"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/caja_nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Nombre(s)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/caja_apelPat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Apellido paterno"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/caja_apelMat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Apellido Materno"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/caja_psswrd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/caja_psswrdR"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Repita su Contraseña"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="389dp"
+            android:layout_height="81dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_registrarse"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:padding="15dp"
+                android:text="Registrarse"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

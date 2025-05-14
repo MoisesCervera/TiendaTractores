@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivityLogin">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="680dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/roundedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="229dp"
+            android:src="@drawable/logotrac" />
+
+        <EditText
+            android:id="@+id/caja_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:padding="18dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/caja_psswrd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/material_dynamic_neutral80"
+            android:padding="18dp"
+            android:text="Iniciar sesión"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--
+            <Button
+            android:id="@+id/btn_registrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrese aqui" />
+            -->
+
+            <TextView
+                android:id="@+id/eti_regist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Crear cuenta"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/eti_contacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Contáctenos"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

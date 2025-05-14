@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ProductoDetalle">
+
+    <!-- Primer bloque para la imagen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewProduct1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <!-- Segundo bloque para la información del producto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewProductName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/textViewModelLabel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modelo:"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewModel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/textViewBrandLabel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marca:"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewBrand1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/textViewDescriptionLabel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción:"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewDescription1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textViewPriceLabel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio:"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewPrice1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <!-- Tercer bloque para el botón -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0F3B21"
+            android:text="Agregar al Carrito"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+
+    <Button
+        android:id="@+id/regresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:backgroundTint="#0F3B21"
+        android:textColor="@color/white"/>
+</LinearLayout>
+
+
+
+
+
+</LinearLayout>
