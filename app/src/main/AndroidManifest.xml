@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaTractores"
         tools:targetApi="31">
+
+        <!-- Actividad de Contacto -->
         <activity
             android:name=".MainActivityContacto"
             android:exported="false"
@@ -21,6 +23,7 @@
             android:name="com.google.android.actions"
             android:resource="@layout/activity_carro_compras" />
 
+        <!-- Actividades adicionales sin Launcher -->
         <activity
             android:name=".RegisterActivityDrcc"
             android:exported="false" />
@@ -28,25 +31,21 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivityCatalogo"
+            android:exported="true" />
+        <activity android:name=".ProductoDetalle" />
+        <activity android:name=".CarroComprasActivity" />
+
+        <!-- SOLO ESTA TIENE EL LAUNCHER -->
+        <activity
             android:name=".MainActivityLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivityCatalogo"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ProductoDetalle" />
-        <activity android:name=".CarroComprasActivity" />
     </application>
 
 </manifest>
