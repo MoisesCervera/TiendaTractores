@@ -25,22 +25,24 @@
             android:layout_marginTop="16dp"/>
 
         <!-- Descripción de contacto -->
+
+        <!-- Logo y botón de Instagram -->
+
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:padding="16dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
-            android:text="Estamos a su disposición y pueden ponerse en contacto con nosotros a través de las siguientes redes sociales"
+            android:padding="16dp"
+            android:text="probando hacer nuevos cambios en la ventana de contacto"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="italic"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <!-- Logo y botón de Instagram -->
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
         <ImageView
             android:id="@+id/ivInstagram"
