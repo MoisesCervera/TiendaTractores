@@ -12,21 +12,23 @@
         android:layout_height="wrap_content">
 
         <!-- Logo de la empresa -->
-        <ImageView
-            android:id="@+id/imageViewLogo"
-            android:layout_width="350dp"
-            android:layout_height="110dp"
-            android:contentDescription="Logo de la empresa"
-            android:src="@drawable/todo_tractores"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            android:layout_marginTop="16dp"/>
 
         <!-- Descripción de contacto -->
 
         <!-- Logo y botón de Instagram -->
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="350dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="28dp"
+            android:contentDescription="@string/logoEmpresa"
+            android:src="@drawable/todo_tractores"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvDescription"
@@ -35,7 +37,7 @@
             android:layout_marginTop="12dp"
             android:gravity="center"
             android:padding="16dp"
-            android:text="probando hacer nuevos cambios en la ventana de contacto"
+            android:text="@string/tituloContacto"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="italic"
@@ -49,10 +51,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="Instagram Logo"
+            android:contentDescription="@string/instagramLogo"
             android:src="@drawable/insta"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
 
@@ -62,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:onClick="btnInsta"
-            android:text="INSTAGRAM"
+            android:text="@string/btnInstagram"
             android:textColor="@color/white"
             android:backgroundTint="#0F3B21"
             app:layout_constraintTop_toBottomOf="@+id/ivInstagram"
@@ -76,34 +78,34 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginTop="16dp"
-            android:contentDescription="Facebook Logo"
+            android:contentDescription="@string/facebookLogo"
             android:src="@drawable/face"
             app:layout_constraintTop_toBottomOf="@+id/btnInstagram"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"/>
 
+        <!-- Logo y botón de Gmail -->
         <Button
             android:id="@+id/btnFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:onClick="btnFace"
-            android:text="FACEBOOK"
-            android:textColor="@color/white"
             android:backgroundTint="#0F3B21"
-            app:layout_constraintTop_toBottomOf="@+id/ivFacebook"
-            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="btnFace"
+            android:text="@string/BtnFacebook"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"/>
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFacebook" />
 
-        <!-- Logo y botón de Gmail -->
         <ImageView
             android:id="@+id/ivGmail"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
-            android:contentDescription="Gmail Logo"
+            android:contentDescription="@string/gmailLogo"
             android:src="@drawable/gmail"
             app:layout_constraintTop_toBottomOf="@+id/btnFacebook"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,14 +117,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:onClick="btnGmail"
-            android:text="GMAIL"
-            android:textColor="@color/white"
             android:backgroundTint="#0F3B21"
-            app:layout_constraintTop_toBottomOf="@+id/ivGmail"
-            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="btnGmail"
+            android:text="@string/btnGmail"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivGmail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
