@@ -11,7 +11,6 @@ import com.example.tiendatractores.R
 
 class MainActivityCatalogo: AppCompatActivity() {
 
-    var listaProductos = ArrayList<Product>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,17 +83,13 @@ class MainActivityCatalogo: AppCompatActivity() {
         }
 
 
-        // Similarmente, define los listeners para los botones restantes btn3 hasta btn13.
-
         val btnVerCarrito = findViewById<Button>(R.id.btnVerCarro)
         btnVerCarrito.setOnClickListener {
             val intent = Intent(this@MainActivityCatalogo, CarroComprasActivity::class.java)
             startActivity(intent)
         }
-        //agregarProductos()
 
 
-        //Ir a la activity de contacto
         val btnEtiContac = findViewById<TextView>(R.id.eti_contacto)
 
         btnEtiContac.setOnClickListener{
@@ -120,37 +115,5 @@ class MainActivityCatalogo: AppCompatActivity() {
         intent.putExtra("urlImagen", producto.urlImagen)
         startActivity(intent)
     }
-
-/*
-    fun agregarProductos() {
-        val producto1 = Product("AmercianFutBoll", 250.0, "AF500BJ", "KIPSTA", "Balón de fútbol americano niños color marrón", "1")
-        val producto2 = Product("AmericanFutBoll", 250.0, "AF100B", "KIPSTA", "Balón de fútbol americano niños color negro", "2")
-        val producto3 = Product("AmercianFutBoll", 280.0, "VOITPRO7", "VOIT", "Balón Futbol Americano Voit Pro No.7", "3")
-        val producto4 = Product("AmercianFutBoll", 400.0, "WTF1895XB", "WILSON", "Balón americano Wilson No.7", "4")
-        val producto5 = Product("Basquetbol", 500.0, "BKWNBL7", "WILSON", "Balón NBA DRV Pro Drip Wilson No.7", "5")
-        val producto6 = Product("Basquetbol", 240.0, "BKSPLO7", "SPALDING", "Balón de Básquetbol Spalding No 7", "6")
-        val producto7 = Product("Basquetbol", 150.0, "BKGLYJ6", "GOLTY", "Balón de baloncesto para niños GOLTY junior No.6", "7")
-        val producto8 = Product("Basquetbol", 160.0, "BKMTOJ6", "METEOR", "Balón de Baloncesto Meteor para los niños y jouvenes No.6", "8")
-        val producto9 = Product("Soccer", 425.0, "BSML754", "MOLTEN", "Balón de fútbol MOLTEN PF-751 No.4", "9")
-        val producto10 = Product("Soccer", 360.0, "BSVTVC5", "VOIT", "Balón de fútbol varios colores No 5", "10")
-        val producto11 = Product("Soccer", 650.0, "BSADFC5", "ADIDAS", "Balón de fútbol UEFA Finale Champions League 2017 No.5", "11")
-        val producto12 = Product("Soccer", 200.0, "BSAGKJ3", "ANGGREK", "Balón de fútbol para Entrenamiento Y Competencia No.3", "12")
-        val producto13 = Product("Soccer", 1400.0, "OVTRC3", "VERMONT", "Pelota de Tenis 3 Tubos 4 c/u Resistente Clasica", "13")
-        listaProductos.add(producto1);
-        listaProductos.add(producto2);
-        listaProductos.add(producto3);
-        listaProductos.add(producto4);
-        listaProductos.add(producto5);
-        listaProductos.add(producto6);
-        listaProductos.add(producto7);
-        listaProductos.add(producto8);
-        listaProductos.add(producto9);
-        listaProductos.add(producto10);
-        listaProductos.add(producto11);
-        listaProductos.add(producto12);
-        listaProductos.add(producto13);
-
-    }
- */
 
 }
