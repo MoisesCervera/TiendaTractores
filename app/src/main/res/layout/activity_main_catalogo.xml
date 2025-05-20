@@ -10,16 +10,18 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="#F4F0E6"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="#2E8B57">
+                android:background="#2E8B57"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageLogo"
@@ -51,34 +53,38 @@
                 android:id="@+id/cartex1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imagen_producto"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_rojo1"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_rojo1" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/texto_producto_nombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Rojo Massey Ferguson 285"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/texto_producto_modelo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="MASSEY FERGUSON" />
+                        android:text="MASSEY FERGUSON"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/texto_producto_precio"
@@ -97,34 +103,38 @@
                 android:id="@+id/cartex2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_verde2"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_verde2" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Especializado Verde John Deere"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="JOHN DEERE"/>
+                        android:text="JOHN DEERE"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice2"
@@ -143,34 +153,38 @@
                 android:id="@+id/cartex3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct3"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_azul3"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_azul3" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Agrícola New Holland Doble Tracción"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="NEW HOLLAND"/>
+                        android:text="NEW HOLLAND"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice3"
@@ -189,34 +203,38 @@
                 android:id="@+id/cartex4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct4"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_4"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_4" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Agricola Case JX75 "
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="CASE"/>
+                        android:text="CASE"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice4"
@@ -235,34 +253,38 @@
                 android:id="@+id/cartex5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct5"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_5"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_5" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Fendt 1000 Vario"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="FENDT"/>
+                        android:text="FENDT"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice5"
@@ -281,34 +303,38 @@
                 android:id="@+id/cartex6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct6"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_6"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_6" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Agricola New Holland TT480"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="NEW HOLLAND" />
+                        android:text="NEW HOLLAND"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice6"
@@ -327,34 +353,38 @@
                 android:id="@+id/cartex7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct7"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_7"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_7" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Zoomlion RG1804"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="ZOOMLION"/>
+                        android:text="ZOOMLION"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice7"
@@ -373,34 +403,38 @@
                 android:id="@+id/cartex8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct8"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_8"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_8" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Nortezac HP4X4"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="NORTEZAC"/>
+                        android:text="NORTEZAC"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice8"
@@ -419,34 +453,38 @@
                 android:id="@+id/cartex9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct9"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_9"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_9" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor John Deere serie 6R Black"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="JOHN DEERE"/>
+                        android:text="JOHN DEERE"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice9"
@@ -465,34 +503,38 @@
                 android:id="@+id/cartex10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct10"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_10"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_10" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Valtra N163 Direct Rosa "
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="VALTRA"/>
+                        android:text="VALTRA"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice10"
@@ -511,34 +553,38 @@
                 android:id="@+id/cartex11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct11"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_11"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_11" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Agrícola TT75 BAS"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="NEW HOLLAND"/>
+                        android:text="NEW HOLLAND"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice11"
@@ -557,34 +603,38 @@
                 android:id="@+id/cartex12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct12"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_12"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_12" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Agrícola Massey Ferguson 4700 M con pala"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="MASSEY FERGUSON"/>
+                        android:text="MASSEY FERGUSON"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice12"
@@ -603,34 +653,38 @@
                 android:id="@+id/cartex13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageViewProduct13"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/tractor_13"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tractor_13" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textViewProductName13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Agrícola MF 4700"
-                        android:textSize="18sp"
                         android:textColor="@color/light_gray"
-                        android:textStyle="bold"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textViewModel13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray"
-                        android:text="MASSEY FERGUSON"/>
+                        android:text="MASSEY FERGUSON"
+                        android:textColor="@color/light_gray" />
 
                     <TextView
                         android:id="@+id/textViewPrice13"
@@ -646,15 +700,22 @@
             <!-- Fin Bloques -->
 
             <TextView
+                android:id="@+id/eti_contacto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contáctenos aquí"
                 android:layout_marginTop="15dp"
-                android:gravity="center"
                 android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Contáctenos aquí"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:id="@+id/eti_contacto"/>
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9C4723"
+                android:text="Cerrar Sesión" />
         </LinearLayout>
 
 

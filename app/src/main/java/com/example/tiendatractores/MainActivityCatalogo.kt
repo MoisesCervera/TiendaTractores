@@ -96,6 +96,12 @@ class MainActivityCatalogo: AppCompatActivity() {
             goToContact()
         }
 
+        val btnCerrarSesion: Button = findViewById(R.id.button)
+        btnCerrarSesion.setOnClickListener {
+            val intent = Intent(this, MainActivityLogin::class.java)
+            startActivity(intent)
+        }
+
     }
 
 
