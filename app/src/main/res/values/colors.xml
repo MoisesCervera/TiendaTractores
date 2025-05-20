@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dark_gray">#333333</color>
-    <color name="reddish_orange">#FF5349</color>
     <color name="light_gray">#DDDDDD</color>
-    <color name="tire_black_green">#2B3A2A</color>
+    <color name="reddish_orange">#FF5349</color>
 
+    <!-- MiniTrac Palette -->
+    <color name="tractor_green">#3B5E39</color>
+    <color name="tire_black_green">#1F3323</color>
+    <color name="rust_red">#9C4723</color>
+    <color name="forest_accent">#254D2C</color>
+    <color name="wheat_beige">#F4F0E6</color>
+    <color name="cream_white">#FAF9F5</color>
 </resources>

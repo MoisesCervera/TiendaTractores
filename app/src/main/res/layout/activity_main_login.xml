@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@color/wheat_beige"
     android:gravity="center"
     android:padding="16dp"
     tools:context=".MainActivityLogin">
@@ -14,13 +14,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="680dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="44dp"
         android:gravity="center"
         android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/eti_contacto"
+            android:layout_width="348dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="right|top"
+            android:text="Contáctenos"
+            android:textColor="@color/tire_black_green"
+            android:textSize="18sp" />
+
         <ImageView
             android:id="@+id/roundedImageView"
-            android:layout_width="match_parent"
+            android:layout_width="398dp"
             android:layout_height="229dp"
             android:src="@drawable/logotrac" />
 
@@ -30,12 +43,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/cream_white"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
             android:padding="18dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/tractor_green"
+            android:textColorHint="@color/tractor_green"
             android:textSize="20sp" />
 
         <EditText
@@ -44,12 +58,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/cream_white"
             android:hint="Contraseña"
             android:inputType="textPassword"
             android:padding="18dp"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/tractor_green"
             android:textSize="20sp" />
 
         <Button
@@ -57,10 +72,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:backgroundTint="@color/material_dynamic_neutral80"
+            android:backgroundTint="@color/tire_black_green"
             android:padding="18dp"
             android:text="Iniciar sesión"
-            android:textColor="#000000"
+            android:textColor="@color/cream_white"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -86,31 +101,19 @@
 
             <TextView
                 android:id="@+id/eti_regist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
                 android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:hapticFeedbackEnabled="false"
                 android:text="Crear cuenta"
-                android:textColor="@color/black"
+                android:textColor="@color/tractor_green"
                 android:textSize="18sp" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/eti_contacto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:text="Contáctenos"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
 
     </LinearLayout>
-
-
-
 
 
 </RelativeLayout>

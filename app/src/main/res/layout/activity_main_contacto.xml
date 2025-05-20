@@ -14,16 +14,14 @@
         <!-- Logo de la empresa -->
         <ImageView
             android:id="@+id/imageViewLogo"
-            android:layout_width="350dp"
+            android:layout_width="409dp"
             android:layout_height="110dp"
-            android:layout_marginTop="28dp"
-            android:background="#367C2B"
+            android:background="@color/tractor_green"
             android:contentDescription="@string/logoEmpresa"
+            android:scaleType="fitCenter"
             android:src="@drawable/todo_tractores"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.499"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp" />
 
         <!-- Redes Sociales Alineadas -->
 
@@ -34,7 +32,7 @@
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:padding="16dp"
-            android:text="@string/tituloContacto"
+            android:text="Conoce mas acerca de nosotros en nuestras redes sociales"
             android:textColor="@color/tire_black_green"
             android:textSize="17sp"
             android:textStyle="italic"
@@ -62,10 +60,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#367C2B"
+            android:backgroundTint="@color/tractor_green"
             android:onClick="btnInsta"
             android:text="@string/btnInstagram"
-            android:textColor="@color/tire_black_green"
+            android:textColor="@color/cream_white"
             app:layout_constraintEnd_toEndOf="@+id/ivInstagram"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/ivInstagram"
@@ -89,10 +87,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#367C2B"
+            android:backgroundTint="@color/tractor_green"
             android:onClick="btnFace"
             android:text="@string/BtnFacebook"
-            android:textColor="@color/tire_black_green"
+            android:textColor="@color/cream_white"
             app:layout_constraintEnd_toEndOf="@+id/ivFacebook"
             app:layout_constraintHorizontal_bias="0.368"
             app:layout_constraintStart_toStartOf="@+id/ivFacebook"
@@ -113,39 +111,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:autofillHints="given-name"
                 android:background="#FFFDD0"
+                android:backgroundTint="@color/cream_white"
                 android:hint="@string/Nombres"
                 android:imeOptions="actionNext"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:padding="8dp"
-                android:autofillHints="given-name" />
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/etLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:autofillHints="family-name"
                 android:background="#FFFDD0"
+                android:backgroundTint="@color/cream_white"
                 android:hint="@string/apellidos"
-                android:inputType="textPersonName"
                 android:imeOptions="actionNext"
+                android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:padding="8dp"
-                android:autofillHints="family-name" />
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:autofillHints="emailAddress"
                 android:background="#FFFDD0"
+                android:backgroundTint="@color/cream_white"
                 android:hint="@string/correoe"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
-                android:padding="8dp"
-                android:autofillHints="emailAddress" />
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/etMessage"
@@ -153,6 +154,7 @@
                 android:layout_height="150dp"
                 android:layout_marginBottom="16dp"
                 android:background="#FFFDD0"
+                android:backgroundTint="@color/cream_white"
                 android:gravity="top"
                 android:hint="@string/mensaje"
                 android:imeOptions="actionDone"
@@ -164,10 +166,10 @@
                 android:id="@+id/btnSendMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#367C2B"
+                android:backgroundTint="@color/tire_black_green"
                 android:minHeight="48dp"
                 android:text="@string/enviarM"
-                android:textColor="@color/tire_black_green"
+                android:textColor="@color/cream_white"
                 android:textStyle="bold" />
         </LinearLayout>
 

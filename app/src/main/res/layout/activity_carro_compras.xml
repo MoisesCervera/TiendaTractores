@@ -47,7 +47,7 @@
                 android:id="@+id/btnregresar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#3B5E39"
+                android:backgroundTint="@color/rust_red"
                 android:text="Regresar"
                 android:textSize="24sp" />
 
