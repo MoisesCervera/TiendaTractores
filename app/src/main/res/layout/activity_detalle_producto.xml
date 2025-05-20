@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F0E6"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".ProductoDetalle">
@@ -9,32 +10,19 @@
     <!-- Primer bloque para la imagen -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <ImageView
-            android:id="@+id/imageViewProduct1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
-    </LinearLayout>
-
-    <!-- Segundo bloque para la información del producto -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_height="332dp"
+        android:layout_weight="1"
+        android:background="#F4F0E6"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewProductName1"
+            android:id="@+id/texto_producto_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text=""
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
-
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewModelLabel1"
@@ -42,14 +30,14 @@
             android:layout_height="wrap_content"
             android:text="Modelo:"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewModel1"
+            android:id="@+id/texto_producto_modelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewBrandLabel1"
@@ -57,14 +45,14 @@
             android:layout_height="wrap_content"
             android:text="Marca:"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBrand1"
+            android:id="@+id/texto_producto_marca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewDescriptionLabel1"
@@ -72,14 +60,14 @@
             android:layout_height="wrap_content"
             android:text="Descripción:"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewDescription1"
+            android:id="@+id/texto_producto_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewPriceLabel1"
@@ -87,14 +75,31 @@
             android:layout_height="wrap_content"
             android:text="Precio:"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewPrice1"
+            android:id="@+id/texto_producto_precio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Segundo bloque para la información del producto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#0B0000"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imagen_producto"
+            android:layout_width="match_parent"
+            android:layout_height="329dp"
+            android:scaleType="centerCrop" />
+
     </LinearLayout>
 
     <!-- Tercer bloque para el botón -->
@@ -104,31 +109,29 @@
         android:layout_marginTop="16dp">
 
         <Button
-            android:id="@+id/buttonAddToCart"
+            android:id="@+id/boton_agregar_al_carrito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#0F3B21"
+            android:backgroundTint="#3B5E39"
             android:text="Agregar al Carrito"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
     </LinearLayout>
+
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp">
-
-
-    <Button
-        android:id="@+id/regresar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Regresar"
-        android:backgroundTint="#0F3B21"
-        android:textColor="@color/white"/>
-</LinearLayout>
+        android:layout_marginTop="16dp">
 
 
-
+        <Button
+            android:id="@+id/boton_regresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3B5E39"
+            android:text="Regresar"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
 
 </LinearLayout>
