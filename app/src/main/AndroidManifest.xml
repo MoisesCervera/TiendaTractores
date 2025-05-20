@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaTractores"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivityContacto"
             android:exported="false"
@@ -27,26 +28,23 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
+
+        <!-- Lanzador principal -->
         <activity
             android:name=".MainActivityLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivityCatalogo"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity android:name=".ProductoDetalle" />
         <activity android:name=".CarroComprasActivity" />
+
     </application>
 
 </manifest>
