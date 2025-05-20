@@ -26,10 +26,13 @@ class CarroComprasActivity : AppCompatActivity() {
         //Boton pagar
         val pagarButton: Button = findViewById(R.id.btnPagar)
 
+        val btnRegresar: Button = findViewById(R.id.btnregresar)
+        btnRegresar.setOnClickListener {
+            val intent = Intent(this, MainActivityCatalogo::class.java)
+
+            startActivity(intent)
+        }
         pagarButton.setOnClickListener {
-            val url = "https://paypal.me/WackyLeo?country.x=MX&locale.x=es_XC"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
             startActivity(intent)
         }
     }

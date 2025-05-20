@@ -39,9 +39,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:backgroundTint="#3B5E39"
                 android:text="Pagar"
-                android:textSize="25sp"
-                android:backgroundTint="@color/reddish_orange"/>
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnregresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3B5E39"
+                android:text="Regresar"
+                android:textSize="24sp" />
 
         </LinearLayout>
     </ScrollView>
