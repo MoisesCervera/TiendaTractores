@@ -1,89 +1,94 @@
 package com.example.tiendatractores
+
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.Product
-import com.example.tiendatractores.R
+import com.example.tiendatractores.databinding.ActivityDetalleProductoBinding
 
 class ProductoDetalle : AppCompatActivity() {
-    var carrito = Carrito.CarritoVer.obtenerProductos()
-    private var variable: Boolean = true
+
+    private lateinit var binding: ActivityDetalleProductoBinding
+    private val carrito = Carrito.CarritoVer.obtenerProductos()
+    private var productoAgregado = false
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detalle_producto)
-        val intent = intent
-        val nombre = intent.getStringExtra("nombre")
-        val modelo = intent.getStringExtra("modelo")
-        val marca = intent.getStringExtra("marca")
-        val descripcion = intent.getStringExtra("descripcion")
-        val precio = intent.getStringExtra("precio")
-        val urlImagen = intent.getStringExtra("urlImagen")
-        val producto = Product(nombre.toString().toString(), precio!!.toDouble(),
-            modelo.toString(), marca.toString(), descripcion.toString(), urlImagen.toString()
-        )
 
-        val imageViewProduct1: ImageView = findViewById(R.id.imageViewProduct1)
-        val textViewProductName1: TextView = findViewById(R.id.textViewProductName1)
-        val textViewModel1: TextView = findViewById(R.id.textViewModel1)
-        val textViewBrand1: TextView = findViewById(R.id.textViewBrand1)
-        val textViewDescription1: TextView = findViewById(R.id.textViewDescription1)
-        val textViewPrice1: TextView = findViewById(R.id.textViewPrice1)
+        binding = ActivityDetalleProductoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val imageView: ImageView = findViewById(R.id.imageViewProduct1)
-        textViewProductName1.text = nombre
-        textViewModel1.text = modelo
-        textViewBrand1.text = marca
-        textViewDescription1.text = descripcion
-        textViewPrice1.text = precio
-
-        when (urlImagen) {
-            "1" -> imageView.setImageResource(R.drawable.tractor_rojo1)
-            "2" -> imageView.setImageResource(R.drawable.tractor_verde2)
-            "3" -> imageView.setImageResource(R.drawable.tractor_azul3)
-            "4" -> imageView.setImageResource(R.drawable.tractor_4)
-            "5" -> imageView.setImageResource(R.drawable.tractor_5)
-            "6" -> imageView.setImageResource(R.drawable.tractor_6)
-            "7" -> imageView.setImageResource(R.drawable.tractor_7)
-            "8" -> imageView.setImageResource(R.drawable.tractor_8)
-            "9" -> imageView.setImageResource(R.drawable.tractor_9)
-            "10" -> imageView.setImageResource(R.drawable.tractor_10)
-            "11" -> imageView.setImageResource(R.drawable.tractor_11)
-            "12" -> imageView.setImageResource(R.drawable.tractor_12)
-            "13" -> imageView.setImageResource(R.drawable.tractor_13)
+        val producto = intent.extras?.let {
+            Product(
+                nombre = it.getString("nombre").orEmpty(),
+                precio = it.getString("precio")?.toDoubleOrNull() ?: 0.0,
+                modelo = it.getString("modelo").orEmpty(),
+                marca = it.getString("marca").orEmpty(),
+                descripcion = it.getString("descripcion").orEmpty(),
+                urlImagen = it.getString("urlImagen").orEmpty()
+            )
+        } ?: run {
+            finish()
+            return
         }
 
-        // Configurar el OnClickListener para el botón "Agregar al Carrito"
-        val buttonAddToCart: Button = findViewById(R.id.buttonAddToCart)
-        buttonAddToCart.setOnClickListener {
-            variable = false
+        distribucionGUI(producto)
+
+        establecerListeners(producto)
+    }
+
+    private fun distribucionGUI(producto: Product) {
+        with(binding) {
+            textoProductoNombre.text = producto.nombre
+            textoProductoModelo.text = producto.modelo
+            textoProductoMarca.text = producto.marca
+            textoProductoDescripcion.text = producto.descripcion
+            textoProductoPrecio.text = "$${producto.precio}"
+
+
+            val imageRes = when (producto.urlImagen) {
+                "1" -> R.drawable.tractor_rojo1
+                "2" -> R.drawable.tractor_verde2
+                "3" -> R.drawable.tractor_azul3
+                "4" -> R.drawable.tractor_4
+                "5" -> R.drawable.tractor_5
+                "6" -> R.drawable.tractor_6
+                "7" -> R.drawable.tractor_7
+                "8" -> R.drawable.tractor_8
+                "9" -> R.drawable.tractor_9
+                "10" -> R.drawable.tractor_10
+                "11" -> R.drawable.tractor_11
+                "12" -> R.drawable.tractor_12
+                "13" -> R.drawable.tractor_13
+                else -> R.drawable.logotrac
+            }
+            imagenProducto.setImageResource(imageRes)
+        }
+    }
+
+    private fun establecerListeners(producto: Product) {
+        binding.botonAgregarAlCarrito.setOnClickListener {
+            productoAgregado = true
             agregarAlCarrito(producto)
         }
 
-        val btnRegresar: Button = findViewById(R.id.regresar)
-        btnRegresar.setOnClickListener {
-            val intent = Intent(this@ProductoDetalle, MainActivityCatalogo::class.java)
-            println("Hola")
-            if (variable == false || carrito.isNotEmpty()) {
-                intent.putExtra("carro_compras", carrito)
-                startActivity(intent)
-            } else {
-                intent.putExtra("nombre", 2)
-                startActivity(intent)
+        binding.botonRegresar.setOnClickListener {
+            val intent = Intent(this, MainActivityCatalogo::class.java).apply {
+                if (productoAgregado || carrito.isNotEmpty()) {
+                    intent.putExtra("carro_compras", carrito)
+                } else {
+                    putExtra("nombre", 2)
+                }
             }
+            startActivity(intent)
         }
     }
 
     private fun agregarAlCarrito(producto: Product) {
         carrito.add(producto)
-        Toast.makeText(this, "Producto agregado al carrito", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Modelo ${producto.modelo} agregado al carrito", Toast.LENGTH_SHORT).show()
     }
-
-
 }

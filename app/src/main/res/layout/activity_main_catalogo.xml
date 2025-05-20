@@ -54,7 +54,7 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="16dp">
                 <ImageView
-                    android:id="@+id/imageViewProduct1"
+                    android:id="@+id/imagen_producto"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/tractor_rojo1"
@@ -66,7 +66,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="16dp">
                     <TextView
-                        android:id="@+id/textViewProductName1"
+                        android:id="@+id/texto_producto_nombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tractor Rojo Massey Ferguson 285"
@@ -74,14 +74,14 @@
                         android:textColor="@color/light_gray"
                         android:textStyle="bold"/>
                     <TextView
-                        android:id="@+id/textViewModel1"
+                        android:id="@+id/texto_producto_modelo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/light_gray"
                         android:text="MASSEY FERGUSON" />
 
                     <TextView
-                        android:id="@+id/textViewPrice1"
+                        android:id="@+id/texto_producto_precio"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="$ 719.00"
