@@ -5,8 +5,24 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="tituloContacto">Conoce mas acerca de nosootros en nuestras redes sociales</string>
+    <string name="BtnFacebook">FACEBOOK</string>
+    <string name="btnGmail">GMAIL</string>
+    <string name="btnInstagram">INSTAGRAM</string>
+    <string name="logoEmpresa">Logo de la empresa</string>
+    <string name="facebookLogo">Facebook logo</string>
+    <string name="gmailLogo">Gmail Logo</string>
+    <string name="instagramLogo">Instagram Logo</string>
+    <string name="Nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="correoe">Correo Electronico</string>
+    <string name="mensaje">Escribe tu mensaje</string>
+    <string name="enviarM">Haz click para enviar tu mensaje</string>
+
 
     <string name="lorem_ipsum">
+
+
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
         dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
