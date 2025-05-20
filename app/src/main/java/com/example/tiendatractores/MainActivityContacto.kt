@@ -11,6 +11,7 @@ import android.widget.Toast
 import android.view.inputmethod.InputMethodManager
 import android.view.inputmethod.EditorInfo
 import androidx.core.net.toUri
+import android.net.Uri
 
 class MainActivityContacto : AppCompatActivity() {
 
@@ -60,12 +61,19 @@ class MainActivityContacto : AppCompatActivity() {
     }
 
     // Métodos para abrir redes sociales
-    fun btnInsta(@Suppress("UNUSED_PARAMETER") view: View) {
-        openURL("https://www.instagram.com/todo_entractores/")
+    fun btnInsta(view: View) {
+        val url = "https://www.instagram.com/apptractor2025?igsh=MTB6OHhxYWY2OXB2aw%3D%3D&utm_source=qr"
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
     }
 
-    fun btnFace(@Suppress("UNUSED_PARAMETER") view: View) {
-        openURL("https://www.facebook.com/profile.php?id=61569338763776")
+
+    fun btnFace(view: View) {
+        val url = "https://www.facebook.com/share/1AN5K4BPJZ/?mibextid=wwXIfr"
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
     }
 
 
