@@ -16,19 +16,19 @@ class MainActivityCatalogo: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_catalogo)
-        val producto1 = Product("Tractor Agrícola", 719.0, "TR285A", "MASSEY FERGUSSON", "Motor agrícola de 4,5L y 4 cilindros de 110hp.", "1")
-        val producto2 = Product("Tractor Agrícola", 497.44, "TR2800B", "JOHN DEERE", "Ideal para trabajar en los espacios más reducidos de los invernaderos y cultivos", "2")
-        val producto3 = Product("Tractor Agrícola", 562.43, "TR6780C", "NEW HOLLAND", "Cuentan con el mejor confort y cuidado para los huertos y viñedos anchos", "3")
-        val producto4 = Product("Tractor Agrícola", 502.54, "TR1989D", "CASE", "Ideal para la preparación de suelo hasta la cosecha", "4")
-        val producto5 = Product("Tractor Agrícola", 477.52, "TR2000E", "FENDT", "Se caracteriza por su durabilidad, flexibilidad y versatilidad para un óptimo desempeño", "5")
-        val producto6 = Product("Tractor Agrícola", 1200.0, "TR1234F", "NEW HOLLAND", "Ofrece mayor potencia debajo de su cofre con diseño vanguardista y moderno completamente abatible", "6")
-        val producto7 = Product("Tractor Agrícola", 471.36, "TR7788G", "ZOOMLION", "Ofrece a los agricultores mexicanos gran tecnología y confort al momento de su operación", "7")
-        val producto8 = Product("Tractor Agrícola", 3001.39, "TR9900H", "NORTEZAC", "Ideal en cualquier aplicación, ya sea para sus propios campos, así como servicios de maquila", "8")
-        val producto9 = Product("Tractor Agrícola", 533.95, "TR3456I", "JOHN DEERE", "Basado en un diseño completamente nuevo y adaptando los últimos avances en ingeniería", "9")
-        val producto10 = Product("Tractor Agrícola", 144.82, "TR2789J", "VALTRA", "Ofrece tecnología y confort al momento de su operación, así como un aspecto moderno, atractivo y vistoso", "10")
-        val producto11 = Product("Tractor Agrícola", 390.38, "TR2100K", "NEW HOLLAND", "ofrece potencia, tecnología y alto rendimiento asi como un inigualable confort", "11")
-        val producto12 = Product("Tractor Agrícola", 865.36, "TR2001L", "MASSEY FERGUSON", "Dotado con potencia, velocidad, capacidad de elevación y fuerza de tracción excepcionales", "12")
-        val producto13 = Product("Tractor Agrícola", 69.40, "TR1984M", "MASSEY FERGUSON", "Perfectos para pequeños agricultores o como tractores utilitarios", "13")
+        val producto1 = Product("RedBarrel", 479.00, "TR100X", "IronSprout", "Motor diésel de 4.2L con 4 cilindros en línea, entrega 95 hp a 2200 rpm.\nIdeal para transporte de carga ligera y media con tráiler trasero integrado.", "1")
+        val producto2 = Product("NightSprout", 459.00, "TR220V", "MiniTorque", "Motor diésel de 4.5L con 4 cilindros en línea, entrega 102 hp a 2100 rpm.\nModelo versátil diseñado para labores generales de campo y cultivos.", "2")
+        val producto3 = Product("ClawMarine", 499.00, "TR310C", "TractoKing", "Motor diésel de 4.0L con 4 cilindros en línea, entrega 90 hp a 2300 rpm.\nIncluye garra frontal para manipulación de troncos, pacas y materiales rústicos.", "3")
+        val producto4 = Product("OrangeStorm", 489.20, "TR400B", "PlayAgro", "Motor diésel de 4.6L con 4 cilindros turboalimentado, entrega 108 hp a 2200 rpm.\nEquipado con soplador frontal para limpieza de caminos y cultivos.", "4")
+        val producto5 = Product("JungleGripper", 529.00, "TR370G", "TinyHarvest", "Motor diésel de 4.3L con 4 cilindros en línea, entrega 97 hp a 2150 rpm.\nDiseño robusto con garra hidráulica para trabajos forestales y agrícolas.", "5")
+        val producto6 = Product("SunCrusher", 509.00, "TR550R", "FerroKid", "Motor diésel de 5.0L con 4 cilindros turbo, entrega 115 hp a 2000 rpm.\nIncluye rodillo frontal para compactación de suelos y aplanado de terrenos.", "6")
+        val producto7 = Product("BlazeBucket", 469.50, "TR600L", "GreenPiston", "Motor diésel de 4.4L con 4 cilindros en línea, entrega 100 hp a 2250 rpm.\nVersión cargadora rápida con pala frontal reforzada para movimiento de materiales.", "7")
+        val producto8 = Product("HydroPod", 519.30, "TR480T", "MechaFarm", "Motor diésel de 4.1L con 4 cilindros, entrega 92 hp a 2100 rpm.\nCon tanque trasero para aplicaciones de riego, fumigación o fertilización.Ideal en cualquier aplicación, ya sea para sus propios campos, así como servicios de maquila", "8")
+        val producto9 = Product("VioletCruze", 549.20, "TR530S", "TractoFun", "Motor diésel de 4.2L con 4 cilindros, entrega 95 hp a 2200 rpm.\nEdición especial con acabado exclusivo y configuración estándar de campo.", "9")
+        val producto10 = Product("SwampLoader", 529.59, "TR520L", "RuralBot", "Motor diésel de 4.3L con 4 cilindros en línea, entrega 98 hp a 2150 rpm.\nEquipo equilibrado para carga frontal y soporte en tareas múltiples.", "10")
+        val producto11 = Product("SolarClamp", 579.45, "TR570C", "Farmodrive", "Motor diésel de 4.6L con 4 cilindros turboalimentado, entrega 110 hp a 2200 rpm.\nCon garra hidráulica de alto alcance, ideal para desmonte y construcción ligera.", "11")
+        val producto12 = Product("IronDump", 439.40, "TR680D", "KiddoTrak", "Motor diésel de 5.2L con 4 cilindros, entrega 118 hp a 2050 rpm.\nCaja de carga trasera volquete con alta capacidad para materiales pesados.", "12")
+        val producto13 = Product("FangForge", 449.50, "TR750F", "SteelSeed", "Motor diésel de 4.8L con 4 cilindros turbo, entrega 112 hp a 2100 rpm.\nProtección frontal de jaula, óptimo para zonas forestales o terrenos con obstáculos.", "13")
 
         val cartex1 = findViewById<LinearLayout>(R.id.cartex1)
         cartex1.setOnClickListener {
@@ -91,7 +91,7 @@ class MainActivityCatalogo: AppCompatActivity() {
             val intent = Intent(this@MainActivityCatalogo, CarroComprasActivity::class.java)
             startActivity(intent)
         }
-        agregarProductos()
+        //agregarProductos()
 
 
         //Ir a la activity de contacto
@@ -121,7 +121,7 @@ class MainActivityCatalogo: AppCompatActivity() {
         startActivity(intent)
     }
 
-
+/*
     fun agregarProductos() {
         val producto1 = Product("AmercianFutBoll", 250.0, "AF500BJ", "KIPSTA", "Balón de fútbol americano niños color marrón", "1")
         val producto2 = Product("AmericanFutBoll", 250.0, "AF100B", "KIPSTA", "Balón de fútbol americano niños color negro", "2")
@@ -151,4 +151,6 @@ class MainActivityCatalogo: AppCompatActivity() {
         listaProductos.add(producto13);
 
     }
+ */
+
 }
