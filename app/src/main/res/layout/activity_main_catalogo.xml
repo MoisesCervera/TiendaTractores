@@ -33,7 +33,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/todo_tractores" />
+                    android:src="@drawable/minitrac" />
 
                 <View
                     android:layout_width="0dp"
