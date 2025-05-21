@@ -6,9 +6,9 @@ object UsuariosManager {
     private val usuariosRegistrados = mutableListOf<Usuario>(
         Usuario(
             email = "admin@tractores.com",
-            nombres = "Juan Carlos",
+            nombres = "Moisés Alexandro",
             apellidoPaterno = "García",
-            apellidoMaterno = "López",
+            apellidoMaterno = "Cervera",
             password = "admin123"
         ),
         Usuario(

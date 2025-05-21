@@ -3,6 +3,7 @@ package com.example.tiendatractores
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.Product
@@ -36,7 +37,6 @@ class ProductoDetalle : AppCompatActivity() {
         }
 
         distribucionGUI(producto)
-
         establecerListeners(producto)
     }
 
@@ -47,7 +47,6 @@ class ProductoDetalle : AppCompatActivity() {
             textoProductoMarca.text = producto.marca
             textoProductoDescripcion.text = producto.descripcion
             textoProductoPrecio.text = "$${producto.precio}"
-
 
             val imageRes = when (producto.urlImagen) {
                 "1" -> R.drawable.tractor_rojo1
@@ -78,11 +77,17 @@ class ProductoDetalle : AppCompatActivity() {
         binding.botonRegresar.setOnClickListener {
             val intent = Intent(this, MainActivityCatalogo::class.java).apply {
                 if (productoAgregado || carrito.isNotEmpty()) {
-                    intent.putExtra("carro_compras", carrito)
+                    putExtra("carro_compras", ArrayList(carrito))
                 } else {
                     putExtra("nombre", 2)
                 }
             }
+            startActivity(intent)
+        }
+
+
+        binding.botonIrACarrito.setOnClickListener {
+            val intent = Intent(this@ProductoDetalle, CarroComprasActivity::class.java)
             startActivity(intent)
         }
     }
