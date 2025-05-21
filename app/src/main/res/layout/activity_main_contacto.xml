@@ -283,7 +283,7 @@
                         android:imeOptions="actionNext"
                         android:inputType="phone"
                         android:maxLength="10"
-                        android:padding="8dp" />
+                        android:padding="12dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
