@@ -102,6 +102,70 @@ class MainActivityCatalogo: AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnAgregarCarrito1: Button = findViewById(R.id.btnAgregarCarrito1)
+        btnAgregarCarrito1.setOnClickListener {
+            navigateToProductoDetalle(producto1)
+        }
+
+        val btnAgregarCarrito2: Button = findViewById(R.id.btnAgregarCarrito2)
+        btnAgregarCarrito2.setOnClickListener {
+            navigateToProductoDetalle(producto2)
+        }
+
+        val btnAgregarCarrito3: Button = findViewById(R.id.btnAgregarCarrito3)
+        btnAgregarCarrito3.setOnClickListener {
+            navigateToProductoDetalle(producto3)
+        }
+
+        val btnAgregarCarrito4: Button = findViewById(R.id.btnAgregarCarrito4)
+        btnAgregarCarrito4.setOnClickListener {
+            navigateToProductoDetalle(producto4)
+        }
+
+        val btnAgregarCarrito5: Button = findViewById(R.id.btnAgregarCarrito5)
+        btnAgregarCarrito5.setOnClickListener {
+            navigateToProductoDetalle(producto5)
+        }
+
+        val btnAgregarCarrito6: Button = findViewById(R.id.btnAgregarCarrito6)
+        btnAgregarCarrito6.setOnClickListener {
+            navigateToProductoDetalle(producto6)
+        }
+
+        val btnAgregarCarrito7: Button = findViewById(R.id.btnAgregarCarrito7)
+        btnAgregarCarrito7.setOnClickListener {
+            navigateToProductoDetalle(producto7)
+        }
+
+        val btnAgregarCarrito8: Button = findViewById(R.id.btnAgregarCarrito8)
+        btnAgregarCarrito8.setOnClickListener {
+            navigateToProductoDetalle(producto8)
+        }
+
+        val btnAgregarCarrito9: Button = findViewById(R.id.btnAgregarCarrito9)
+        btnAgregarCarrito9.setOnClickListener {
+            navigateToProductoDetalle(producto9)
+        }
+
+        val btnAgregarCarrito10: Button = findViewById(R.id.btnAgregarCarrito10)
+        btnAgregarCarrito10.setOnClickListener {
+            navigateToProductoDetalle(producto10)
+        }
+
+        val btnAgregarCarrito11: Button = findViewById(R.id.btnAgregarCarrito11)
+        btnAgregarCarrito11.setOnClickListener {
+            navigateToProductoDetalle(producto11)
+        }
+
+        val btnAgregarCarrito12: Button = findViewById(R.id.btnAgregarCarrito12)
+        btnAgregarCarrito12.setOnClickListener {
+            navigateToProductoDetalle(producto12)
+        }
+
+        val btnAgregarCarrito13: Button = findViewById(R.id.btnAgregarCarrito13)
+        btnAgregarCarrito13.setOnClickListener {
+            navigateToProductoDetalle(producto13)
+        }
     }
 
 

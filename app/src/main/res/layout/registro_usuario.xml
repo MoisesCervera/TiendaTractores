@@ -1,151 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
-    android:gravity="center"
-    android:padding="16dp"
+    android:background="@color/wheat_beige"
+    android:padding="24dp"
     tools:context=".RegisterActivity">
 
-    <LinearLayout
+    <!-- Contenedor principal con scroll para adaptarse a diferentes tamaños de pantalla -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <ImageView
-            android:layout_width="336dp"
-            android:layout_height="100dp"
-            android:cropToPadding="false"
-            android:src="@drawable/logo_tractor" />
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
+            <!-- Logo de la aplicación -->
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Logo de la aplicación"
+                android:src="@drawable/logo_tractor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <!-- Título de registro -->
             <TextView
+                android:id="@+id/txt_register_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Iniciar sesión"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-black"
-                android:id="@+id/eti_inic_ses"/>
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Crear nueva cuenta"
+                android:textColor="@color/tire_black_green"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo_image" />
 
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/caja_correo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Correo electrónico"
-            android:inputType="text"
-            android:padding="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/caja_nombres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Nombre(s)"
-            android:inputType="text"
-            android:padding="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/caja_apelPat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Apellido paterno"
-            android:inputType="text"
-            android:padding="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/caja_apelMat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Apellido Materno"
-            android:inputType="text"
-            android:padding="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="15sp" />
-
-
-        <EditText
-            android:id="@+id/caja_psswrd"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:padding="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="15sp" />
-
-
-        <EditText
-            android:id="@+id/caja_psswrdR"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Repita su Contraseña"
-            android:inputType="textPassword"
-            android:padding="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="15sp" />
-
-        <LinearLayout
-            android:layout_width="389dp"
-            android:layout_height="81dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/btn_registrarse"
-                android:layout_width="317dp"
+            <TextView
+                android:id="@+id/txt_register_subtitle"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@color/white"
-                android:padding="15dp"
+                android:layout_marginTop="8dp"
+                android:text="Complete sus datos para registrarse"
+                android:textAlignment="center"
+                android:textColor="@color/tractor_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_register_title"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <!-- Tarjeta contenedora del formulario -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/form_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/cream_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_register_subtitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Campo de correo electrónico -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_email"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Correo electrónico"
+                        app:boxStrokeColor="@color/tire_black_green"
+                        app:hintTextColor="@color/tire_black_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/caja_correo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/tire_black_green"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo de nombre(s) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_names"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Nombre(s)"
+                        app:boxStrokeColor="@color/tire_black_green"
+                        app:hintTextColor="@color/tire_black_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/caja_nombres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/tire_black_green"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Fila para apellidos -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <!-- Apellido paterno -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_lastname1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:hint="Apellido paterno"
+                            app:boxStrokeColor="@color/tire_black_green"
+                            app:hintTextColor="@color/tire_black_green">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/caja_apelPat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Apellido materno -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_lastname2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:hint="Apellido materno"
+                            app:boxStrokeColor="@color/tire_black_green"
+                            app:hintTextColor="@color/tire_black_green">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/caja_apelMat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Campo de contraseña -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_password"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Contraseña"
+                        app:boxStrokeColor="@color/tire_black_green"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/tire_black_green"
+                        app:hintTextColor="@color/tire_black_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/caja_psswrd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textColor="@color/tire_black_green"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo de repetir contraseña -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_confirm_password"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Repita su contraseña"
+                        app:boxStrokeColor="@color/tire_black_green"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/tire_black_green"
+                        app:hintTextColor="@color/tire_black_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/caja_psswrdR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textColor="@color/tire_black_green"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Términos y condiciones -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/tire_black_green" />
+
+                        <TextView
+                            android:id="@+id/txt_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Acepto los términos y condiciones"
+                            android:textColor="@color/tractor_green"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Botón de registro -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_registrarse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/tire_black_green"
+                android:paddingVertical="12dp"
                 android:text="Registrarse"
-                android:textColor="#000000"
-                android:textSize="20sp" />
-        </LinearLayout>
+                android:textAllCaps="false"
+                android:textColor="@color/cream_white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/form_container"
+                app:layout_constraintWidth_percent="0.8" />
 
+            <!-- Opción para ir a iniciar sesión -->
+            <TextView
+                android:id="@+id/eti_inic_ses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:padding="8dp"
+                android:text="¿Ya tienes cuenta? Iniciar sesión"
+                android:textColor="@color/tractor_green"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_registrarse"
+                app:layout_constraintVertical_bias="0.0" />
 
-    </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,9 +23,6 @@
             android:resource="@layout/activity_carro_compras" />
 
         <activity
-            android:name=".RegisterActivityDrcc"
-            android:exported="false" />
-        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
 

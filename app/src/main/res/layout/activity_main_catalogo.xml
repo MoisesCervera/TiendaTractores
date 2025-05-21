@@ -1,736 +1,1218 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_gray"
+    android:background="#F2F2F2"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivityCatalogo">
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#F4F0E6"
             android:orientation="vertical">
 
+            <!-- Header con Logo y Botón de Carrito -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="77dp"
+                android:layout_height="70dp"
                 android:background="@color/tractor_green"
-                android:orientation="horizontal">
+                android:elevation="4dp"
+                android:gravity="top|center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
 
                 <ImageView
                     android:id="@+id/imageLogo"
-                    android:layout_width="183dp"
+                    android:layout_width="130dp"
                     android:layout_height="match_parent"
-                    android:adjustViewBounds="false"
-                    android:cropToPadding="false"
+                    android:layout_marginStart="4dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/todo_tractores" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp">
-
-                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/btnVerCarro"
-                    android:layout_width="match_parent"
-                    android:layout_height="77dp"
-                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
                     android:backgroundTint="@color/tire_black_green"
-                    android:backgroundTintMode="add"
+                    android:drawableStart="@android:drawable/ic_menu_more"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     android:text="Ver carrito"
-                    android:textColor="@color/white"
-                    android:textColorLink="@color/tire_black_green" />
-
+                    android:textAllCaps="false"
+                    android:textColor="@color/cream_white" />
             </LinearLayout>
 
-            <!-- 1er bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imagen_producto"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_rojo1" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/texto_producto_nombre"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="RedBarrel"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/texto_producto_modelo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="MASSEY FERGUSON"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/texto_producto_precio"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$479.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 2do bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_verde2" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="NightSprout"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR220V"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$459.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 3er bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct3"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_azul3" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="ClawMarine"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR310C"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$499.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 4to bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct4"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_4" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="OrangeStorm"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR400B"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$489.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 5to bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct5"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_5" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="JungleGripper"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR370G"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$529.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 6to bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct6"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_6" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="SunCrusher"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR550R"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$509.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 7mo bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct7"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_7" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="BlazeBucket"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR600L"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$469.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 8vo bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct8"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_8" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="HydroPod"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR480T"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$519.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 9no bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct9"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_9" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="VioletCruze"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR530S"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$549.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 10vo bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct10"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_10" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="SwampLoader"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR520L"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$529.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 11vo bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct11"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_11" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="SolarClamp"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR570C"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$579.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 12vo bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct12"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_12" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="IronDump"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR680D"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$439.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 13vo bloque -->
-
-            <LinearLayout
-                android:id="@+id/cartex13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProduct13"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/tractor_13" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textViewProductName13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="FangForge"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textViewModel13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TR750F"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textViewPrice13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="$449.00"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Fin Bloques -->
-
+            <!-- Título del Catálogo -->
             <TextView
-                android:id="@+id/eti_contacto"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:text="Contacto"
-                android:textColor="@color/tire_black_green"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content"
+                android:background="@color/cream_white"
+                android:fontFamily="sans-serif-medium"
+                android:padding="16dp"
+                android:text="Nuestros Tractores"
+                android:textAlignment="center"
+                android:textColor="@color/tractor_green"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/button"
+            <!-- Contenedor de Productos -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="#9c4723"
-                android:text="Cerrar Sesión"
-                android:textColorLink="#7C3030" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/wheat_beige"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Producto 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_rojo1" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="RedBarrel"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="TR100X  "
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$479.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewProduct2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_verde2" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewProductName2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="NightSprout"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViewModel2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="TR220V"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textViewPrice2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$459.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewProduct3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_azul3" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewProductName3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="ClawMarine"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViewModel3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="TR310C"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textViewPrice3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$499.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewProduct4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_4" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewProductName4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="OrangeStorm"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViewProductModel4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="PlayAgro - TR400B"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textViewProductPrice4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$489.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 5 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewProduct5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_5" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewProductName5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="JungleGripper"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViewProductModel5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="TinyHarvest - TR370G"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textViewProductPrice5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$529.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 6 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewProduct6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_6" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewProductName6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="SunCrusher"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViewProductModel6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="FerroKid - TR550R"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textViewProductPrice6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$509.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 7 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewProduct7"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_7" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewProductName7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="BlazeBucket"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViewProductModel7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="GreenPiston - TR600L"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textViewProductPrice7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$469.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 8 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto8"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_7" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="HydroPod"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="MechaFarm"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$519.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 9 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_8" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="VioletCruze"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="TractoFun"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$549.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 10 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_9" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="SwampLoader"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="RuralBot"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$529.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 11 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_10" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="SolarClamp"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Farmodrive"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$579.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 12 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_11" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="IronDump"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="KiddoTrak"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$439.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 13 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/cream_white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/cartex13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Imagen con borde y sombra -->
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imagen_producto13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                android:padding="1dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tractor_12" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_producto_nombre13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="FangForge"
+                                android:textColor="@color/tire_black_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_modelo13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="SteelSeed"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/texto_producto_precio13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="$449.00"
+                                android:textColor="@color/tractor_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnAgregarCarrito13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/tractor_green"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="Ver más"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cream_white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <!-- Footer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tractor_green"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/eti_contacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"
+                    android:text="CONTACTO"
+                    android:textColor="@color/cream_white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/rust_red"
+                    android:text="Cerrar Sesión"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cream_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </LinearLayout>
-
-
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tractor_rojo1" />
 </LinearLayout>
