@@ -7,6 +7,7 @@
     android:background="#F4F0E6"
     tools:context=".MainActivityContacto">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -213,7 +214,7 @@
                         android:hint="@string/Nombres"
                         android:imeOptions="actionNext"
                         android:inputType="textPersonName"
-                        android:padding="8dp" />
+                        android:padding="12dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -232,7 +233,7 @@
                         android:hint="@string/apellidos"
                         android:imeOptions="actionNext"
                         android:inputType="textPersonName"
-                        android:padding="8dp" />
+                        android:padding="12dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -362,7 +363,7 @@
                         android:layout_marginEnd="8dp"
                         android:contentDescription="Icono de ubicación"
                         android:src="@android:drawable/ic_dialog_map"
-                        android:tint="@color/tractor_green" />
+                        app:tint="@color/tractor_green" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -385,7 +386,7 @@
                         android:layout_marginEnd="8dp"
                         android:contentDescription="Icono de teléfono"
                         android:src="@android:drawable/ic_menu_call"
-                        android:tint="@color/tractor_green" />
+                        app:tint="@color/tractor_green" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -407,7 +408,7 @@
                         android:layout_marginEnd="8dp"
                         android:contentDescription="Icono de email"
                         android:src="@android:drawable/ic_dialog_email"
-                        android:tint="@color/tractor_green" />
+                        app:tint="@color/tractor_green" />
 
                     <TextView
                         android:layout_width="wrap_content"

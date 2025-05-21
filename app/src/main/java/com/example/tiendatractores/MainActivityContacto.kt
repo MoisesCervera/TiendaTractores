@@ -78,6 +78,9 @@ class MainActivityContacto : AppCompatActivity() {
 
 
 
+
+
+
     // Método optimizado para abrir URLs
     private fun openURL(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, url.toUri())
