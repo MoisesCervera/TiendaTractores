@@ -12,6 +12,8 @@ import android.view.inputmethod.InputMethodManager
 import android.view.inputmethod.EditorInfo
 import androidx.core.net.toUri
 import android.net.Uri
+import android.widget.CheckBox
+import androidx.core.content.ContextCompat
 
 class MainActivityContacto : AppCompatActivity() {
 
@@ -21,6 +23,8 @@ class MainActivityContacto : AppCompatActivity() {
     private lateinit var etEmail: EditText
     private lateinit var etMessage: EditText
     private lateinit var btnSendMessage: Button
+    private lateinit var etPhone: EditText
+    private lateinit var cbConsent: CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,8 @@ class MainActivityContacto : AppCompatActivity() {
         etEmail = findViewById(R.id.etEmail)
         etMessage = findViewById(R.id.etMessage)
         btnSendMessage = findViewById(R.id.btnSendMessage)
+        etPhone = findViewById(R.id.etPhone)
+        cbConsent = findViewById(R.id.cbConsent)
 
         // Listener para el botón de enviar
         btnSendMessage.setOnClickListener {
@@ -102,5 +108,9 @@ class MainActivityContacto : AppCompatActivity() {
         etLastName.text.clear()
         etEmail.text.clear()
         etMessage.text.clear()
+        etPhone.text.clear()
+        cbConsent.isChecked = false
+        cbConsent.buttonTintList = ContextCompat.getColorStateList(this, android.R.color.darker_gray)
+
     }
 }

@@ -292,6 +292,7 @@
                         android:hint="Teléfono (opcional)"
                         android:imeOptions="actionNext"
                         android:inputType="phone"
+                        android:maxLength="10"
                         android:padding="8dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
