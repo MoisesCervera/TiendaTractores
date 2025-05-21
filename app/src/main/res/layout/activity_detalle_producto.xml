@@ -7,7 +7,6 @@
     android:background="#F4F0E6"
     tools:context=".ProductoDetalle">
 
-    <!-- AppBar con imagen destacada -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -22,7 +21,6 @@
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <!-- Imagen del producto con efecto de parallax -->
             <ImageView
                 android:id="@+id/imagen_producto"
                 android:layout_width="match_parent"
@@ -31,7 +29,6 @@
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
 
-            <!-- Overlay oscuro para mejor legibilidad -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -48,7 +45,6 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Contenido principal -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -58,7 +54,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Tarjeta principal de información del producto -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardProductInfo"
                 android:layout_width="match_parent"
@@ -77,7 +72,6 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Encabezado del producto con nombre y precio -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -124,7 +118,6 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Divisor -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -132,7 +125,6 @@
                         android:layout_marginBottom="12dp"
                         android:background="#E0E0E0" />
 
-                    <!-- Especificaciones del producto -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -185,7 +177,6 @@
                             android:textSize="16sp" />
                     </LinearLayout>
 
-                    <!-- Nueva sección - Estado de disponibilidad -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -213,14 +204,12 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Divisor -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="12dp"
                         android:background="#E0E0E0" />
 
-                    <!-- Descripción del producto -->
                     <TextView
                         android:id="@+id/textViewDescriptionLabel1"
                         android:layout_width="match_parent"
@@ -241,7 +230,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Tarjeta para características técnicas -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardTechSpecs"
                 android:layout_width="match_parent"
@@ -256,7 +244,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardProductInfo"/>
 
-            <!-- Tarjeta para selección de cantidad -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardQuantity"
                 android:layout_width="match_parent"
@@ -271,7 +258,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardTechSpecs"/>
 
-            <!-- Botones de acción -->
             <LinearLayout
                 android:id="@+id/layoutButtons"
                 android:layout_width="match_parent"
@@ -333,7 +319,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- FAB para compartir -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabShare"
         android:layout_width="wrap_content"

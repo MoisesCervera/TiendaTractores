@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header con Logo y Botón de Carrito -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
@@ -55,7 +54,6 @@
                     android:textColor="@color/cream_white" />
             </LinearLayout>
 
-            <!-- Título del Catálogo -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +66,6 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <!-- Contenedor de Productos -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -8,7 +8,6 @@
     android:padding="24dp"
     tools:context=".RegisterActivity">
 
-    <!-- Contenedor principal con scroll para adaptarse a diferentes tamaños de pantalla -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Logo de la aplicación -->
             <ImageView
                 android:id="@+id/logo_image"
                 android:layout_width="0dp"
@@ -35,7 +33,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.8" />
 
-            <!-- Título de registro -->
             <TextView
                 android:id="@+id/txt_register_title"
                 android:layout_width="wrap_content"
@@ -64,7 +61,6 @@
                 app:layout_constraintTop_toBottomOf="@id/txt_register_title"
                 app:layout_constraintWidth_percent="0.9" />
 
-            <!-- Tarjeta contenedora del formulario -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/form_container"
                 android:layout_width="match_parent"
@@ -83,7 +79,6 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Campo de correo electrónico -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_email"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -103,7 +98,6 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Campo de nombre(s) -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_names"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -124,7 +118,6 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Fila para apellidos -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -132,7 +125,6 @@
                         android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <!-- Apellido paterno -->
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/til_lastname1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -154,7 +146,6 @@
 
                         </com.google.android.material.textfield.TextInputLayout>
 
-                        <!-- Apellido materno -->
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/til_lastname2"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -177,7 +168,6 @@
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
 
-                    <!-- Campo de contraseña -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_password"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -200,7 +190,6 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Campo de repetir contraseña -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_confirm_password"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -223,7 +212,6 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Términos y condiciones -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -248,7 +236,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Botón de registro -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_registrarse"
                 android:layout_width="0dp"
@@ -267,7 +254,6 @@
                 app:layout_constraintTop_toBottomOf="@id/form_container"
                 app:layout_constraintWidth_percent="0.8" />
 
-            <!-- Opción para ir a iniciar sesión -->
             <TextView
                 android:id="@+id/eti_inic_ses"
                 android:layout_width="wrap_content"

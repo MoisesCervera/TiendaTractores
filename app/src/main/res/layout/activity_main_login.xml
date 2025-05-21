@@ -9,7 +9,6 @@
     android:padding="24dp"
     tools:context=".MainActivityLogin">
 
-    <!-- Contacto en la esquina superior derecha -->
     <TextView
         android:id="@+id/eti_contacto"
         android:layout_width="wrap_content"
@@ -22,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:padding="8dp" />
 
-    <!-- Logo centrado y con tamaño apropiado -->
     <ImageView
         android:id="@+id/logo_image"
         android:layout_width="0dp"
@@ -36,7 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Título de bienvenida -->
     <TextView
         android:id="@+id/txt_welcome"
         android:layout_width="0dp"
@@ -51,7 +48,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Subtítulo -->
     <TextView
         android:id="@+id/txt_subtitle"
         android:layout_width="0dp"
@@ -65,7 +61,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Contenedor de campos de formulario -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/form_container"
         android:layout_width="match_parent"
@@ -84,7 +79,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Campo de correo electrónico con ícono -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_email"
                 android:layout_width="match_parent"
@@ -105,7 +99,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Campo de contraseña con ícono y visibilidad -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_password"
                 android:layout_width="match_parent"
@@ -129,7 +122,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Recordar contraseña -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -154,7 +146,6 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Botón de inicio de sesión -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
@@ -172,7 +163,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/form_container" />
 
-    <!-- Separador o línea -->
     <LinearLayout
         android:id="@+id/divider"
         android:layout_width="match_parent"
@@ -204,7 +194,6 @@
             android:alpha="0.5" />
     </LinearLayout>
 
-    <!-- Opción para crear cuenta -->
     <TextView
         android:id="@+id/eti_regist"
         android:layout_width="wrap_content"
@@ -219,6 +208,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Footer con información de versión -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
